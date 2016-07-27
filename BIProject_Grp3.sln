@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_BIProject", "WCF_BIProject\WCF_BIProject.csproj", "{D232BDCE-EB4F-4E3C-AE32-9425A69F6958}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIP_ASPGUI", "BIP_ASPGUI\BIP_ASPGUI.csproj", "{38E95D97-A7E1-4B81-BBBA-143817FDA835}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D232BDCE-EB4F-4E3C-AE32-9425A69F6958} = {D232BDCE-EB4F-4E3C-AE32-9425A69F6958}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D232BDCE-EB4F-4E3C-AE32-9425A69F6958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D232BDCE-EB4F-4E3C-AE32-9425A69F6958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D232BDCE-EB4F-4E3C-AE32-9425A69F6958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D232BDCE-EB4F-4E3C-AE32-9425A69F6958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38E95D97-A7E1-4B81-BBBA-143817FDA835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E95D97-A7E1-4B81-BBBA-143817FDA835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E95D97-A7E1-4B81-BBBA-143817FDA835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E95D97-A7E1-4B81-BBBA-143817FDA835}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

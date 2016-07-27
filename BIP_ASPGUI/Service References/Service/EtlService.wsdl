@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EtlService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:4897/EtlService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:4897/EtlService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEtlService_GetConnectors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConnectors" />
+  </wsdl:message>
+  <wsdl:message name="IEtlService_GetConnectors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConnectorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtlService_GetEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvents" />
+  </wsdl:message>
+  <wsdl:message name="IEtlService_GetEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtlService_GetEventSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventSize" />
+  </wsdl:message>
+  <wsdl:message name="IEtlService_GetEventSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtlService_GetWarnings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarnings" />
+  </wsdl:message>
+  <wsdl:message name="IEtlService_GetWarnings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarningsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtlService_GetErrors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetErrors" />
+  </wsdl:message>
+  <wsdl:message name="IEtlService_GetErrors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetErrorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEtlService_GetTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactions" />
+  </wsdl:message>
+  <wsdl:message name="IEtlService_GetTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEtlService">
+    <wsdl:operation name="GetConnectors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtlService/GetConnectors" message="tns:IEtlService_GetConnectors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtlService/GetConnectorsResponse" message="tns:IEtlService_GetConnectors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtlService/GetEvents" message="tns:IEtlService_GetEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtlService/GetEventsResponse" message="tns:IEtlService_GetEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventSize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtlService/GetEventSize" message="tns:IEtlService_GetEventSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtlService/GetEventSizeResponse" message="tns:IEtlService_GetEventSize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWarnings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtlService/GetWarnings" message="tns:IEtlService_GetWarnings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtlService/GetWarningsResponse" message="tns:IEtlService_GetWarnings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetErrors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtlService/GetErrors" message="tns:IEtlService_GetErrors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtlService/GetErrorsResponse" message="tns:IEtlService_GetErrors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEtlService/GetTransactions" message="tns:IEtlService_GetTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEtlService/GetTransactionsResponse" message="tns:IEtlService_GetTransactions_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEtlService" type="tns:IEtlService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetConnectors">
+      <soap:operation soapAction="http://tempuri.org/IEtlService/GetConnectors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <soap:operation soapAction="http://tempuri.org/IEtlService/GetEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventSize">
+      <soap:operation soapAction="http://tempuri.org/IEtlService/GetEventSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarnings">
+      <soap:operation soapAction="http://tempuri.org/IEtlService/GetWarnings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrors">
+      <soap:operation soapAction="http://tempuri.org/IEtlService/GetErrors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <soap:operation soapAction="http://tempuri.org/IEtlService/GetTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EtlService">
+    <wsdl:port name="BasicHttpBinding_IEtlService" binding="tns:BasicHttpBinding_IEtlService">
+      <soap:address location="http://localhost:4897/EtlService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

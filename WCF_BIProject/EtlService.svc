@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WCF_BIProject.EtlService" CodeBehind="EtlService.svc.cs" %>
+
+

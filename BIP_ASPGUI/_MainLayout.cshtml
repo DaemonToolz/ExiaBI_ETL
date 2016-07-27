@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html >
+<head>
+    <meta charset="utf-8" />
+    <title>@Page.Title - Flow Control Panel</title>
+
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+    <link href="~/Content/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="The description of my page" />
+</head>
+<body>
+
+
+    <div class="navigation">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="collapse navbar-collapse" style="height: 1px;" aria-expanded="false" id="navbar">
+                    <ul id="menu" class="nav navbar-nav">
+                        <li>
+                            <a href="~/Views/MainView.cshtml">
+                                <span class="glyphicon glyphicon-retweet"></span>
+                                Main Control Panel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="~/Views/Dashboard.cshtml">
+                                <span class="glyphicon glyphicon-dashboard"></span>
+                                Dashboard
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron" >
+            <div class="row">
+                <div class="col-md-12">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

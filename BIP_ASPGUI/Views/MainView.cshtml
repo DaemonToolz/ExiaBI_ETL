@@ -1,0 +1,86 @@
+﻿
+@{
+    Layout = "~/_MainLayout.cshtml";
+    Page.Title = "Main ";
+}
+
+@using BIP_ASPGUI;
+
+<style>
+    hr{
+        color:black;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-12 " style="padding-top:75px;">
+        <div class="col-md-2">
+            <h2>Flow Control Panel</h2>
+        </div>
+        <div class="col-md-10">
+            
+            <div class="col-md-9 col-md-offset-1" style="border:1px black solid; background-color:rgba(255,255,255,0.5);">
+                <h4 style="text-align:center;">
+                    Connections
+                    <br />
+                    <span class="glyphicon glyphicon-random"></span>
+                </h4>
+                
+                <hr />
+                @ServiceConnector.getData()
+                <hr />
+            </div>
+
+            <div class="col-md-3 col-md-offset-1" style="background-color:rgba(255,255,100,0.5); border-left:0.5px solid black; border-right:0.5px solid black;">
+                <h4 style="text-align:center;">
+                    Warnings
+                    <br />
+                    <span class="glyphicon glyphicon-alert"></span>
+                </h4>
+                
+                <hr />
+                @ServiceConnector.getWarnings()
+                <hr />
+            </div>
+            <div class="col-md-3" style="background-color:rgba(100,255,100,0.5); border-left:0.5px solid black; border-right:0.5px solid black;">
+                <h4 style="text-align:center;">
+                    Transactions
+                    <br />
+                    <span class="glyphicon glyphicon-refresh"></span>
+                </h4>
+                
+                <hr />
+                @ServiceConnector.getTransactions()
+                <hr />
+            </div>
+            <div class="col-md-3" style="background-color:rgba(255,100,100,0.5); border-left:0.5px solid black; border-right:1px solid black">
+                <h4 style="text-align:center;">
+                    Errors
+                    <br />
+                    <span class="glyphicon glyphicon-remove-sign"></span>
+                </h4>
+                
+                <hr />
+                @ServiceConnector.getFailures()
+                <hr/>
+            </div>
+
+
+            <div class="col-md-9 col-md-offset-1" style="background-color:rgba(255,255,255,0.5); border:1px solid black">
+                <h4 style="text-align:center;">
+                    Events
+                    <br />
+                    <span class="glyphicon glyphicon-book"></span>
+                </h4>
+                <hr/>
+                @foreach(var str in ServiceConnector.getEvents())
+                {
+                    @str<br/> 
+                }
+                <hr />
+            </div>
+
+        </div>
+
+    </div>
+</div>
